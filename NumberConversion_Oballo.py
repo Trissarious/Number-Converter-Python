@@ -6,10 +6,10 @@ def decimal_to_binary(number):
     return bin(number)[2:]
 
 def decimal_to_octal(number):
-    return oct(number)
+    return oct(number)[2:]
 
 def decimal_to_hexa(number):
-    return hex(number)
+    return hex(number)[2:]
 
 def binary_to_decimal(binary_str):
     return int(binary_str, 2)
@@ -110,12 +110,12 @@ while True:
     if choice == '1': # Decimal to Binary
         decimal_number = int(user_input)
         result = decimal_to_binary(decimal_number)
-        print(f"Decimal to Binary: {result}")
+        print(f"Decimal to Binary: {result} ({len(result)} bits)")
 
     elif choice == '2': # Decimal to Octal
         decimal_number = int(user_input)
         result = decimal_to_octal(decimal_number)
-        print(f"Decimal to Octal: {result}")
+        print(f"Decimal to Octal: {result} ")
 
     elif choice == '3': # Decimal to Hexadecimal
         decimal_number = int(user_input)
@@ -145,7 +145,7 @@ while True:
     elif choice == '8':  # Octal to Binary
         octal_str = user_input
         result = octal_to_binary(octal_str)
-        print(f"Octal to Binary: {result}")
+        print(f"Octal to Binary: {result} ({len(result)} bits)")
 
     elif choice == '9':  # Octal to Hexadecimal
         octal_str = user_input
@@ -160,7 +160,7 @@ while True:
     elif choice == '11':  # Hexadecimal to Binary
         hexadecimal_str = user_input
         result = hexa_to_binary(hexadecimal_str)
-        print(f"Hexadecimal to Binary: {result}")
+        print(f"Hexadecimal to Binary: {result} ({len(result)} bits)")
 
     elif choice == '12':  # Hexadecimal to Octal
         hexadecimal_str = user_input
