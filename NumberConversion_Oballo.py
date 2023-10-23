@@ -3,7 +3,9 @@
 
 # Functions
 def decimal_to_binary(number):
-    return bin(number)[2:]
+    binary = bin(number)[2:]
+    binary = binary.zfill(8)
+    return binary
 
 def decimal_to_octal(number):
     return oct(number)[2:]
@@ -43,6 +45,7 @@ def octal_to_decimal(octal_str):
 def octal_to_binary(octal_str):
     decimal_number = int(octal_str, 8)
     binary_str = bin(decimal_number)[2:]
+    binary_str = binary_str.zfill(8)
     return binary_str
 
 def octal_to_hexadecimal(octal_str):
@@ -56,6 +59,7 @@ def hexa_to_decimal(hexadecimal_str):
 def hexa_to_binary(hexadecimal_str):
     decimal_number = int(hexadecimal_str, 16)
     binary_str = bin(decimal_number)[2:]
+    binary_str = binary_str.zfill(8)
     return binary_str
 
 def hexa_to_octal(hexadecimal_str):
